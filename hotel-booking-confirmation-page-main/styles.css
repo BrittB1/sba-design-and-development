@@ -10,3 +10,9 @@
     --terracotta-600: hsl(15,74%,41%)
     --sun-500: hsl(42,83%,58%)
 }
+
+body {
+    /* var is okay for CSS, NOT Javascript */
+    font-family: var(--font-body);
+    font-size: 14px;
+}
