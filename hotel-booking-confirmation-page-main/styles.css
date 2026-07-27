@@ -21,3 +21,45 @@ body {
 h1,h2,h3 {
   font-family: var(--font-display);
 }
+
+.logo {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation li {
+    margin-bottom: 0.25rem;
+}
+
+.navigation a {
+    display: block;
+    text-decoration: none;
+    color: var(--neutral-700);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+}
+
+.weather {
+    background-color: var(--sun-200);
+    border-radius: 0.75rem;
+    padding: 1rem;
+}
+
+.weather-temp {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.copyright-stuff {
+    font-size: 0.75rem;
+    color: var(--neutral-600);
+    margin-top: 1rem;
+}
