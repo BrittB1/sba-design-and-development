@@ -15,4 +15,9 @@ body {
     /* var is okay for CSS, NOT Javascript */
     font-family: var(--font-body);
     font-size: 14px;
+    background-color: var(--neutral-100);
+}
+
+h1,h2,h3 {
+  font-family: var(--font-display);
 }
