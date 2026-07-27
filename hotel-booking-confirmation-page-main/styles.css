@@ -95,13 +95,27 @@ h1,h2,h3 {
 }
 
 /* Cards */
-.host-note.card-body {
+
+.receipt,
+.host-note {
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+.host-note {
+  z-index: 2;
+}
+
+.receipt {
+  z-index: 1;
+}
+
+.host-note .card-body {
   background-color: var(--terracotta-600);
   color: var(--neutral-50);
   border-radius: inherit;
 }
 
-.receipt.card-body {
+.receipt .card-body {
   background-color: var(--neutral-50);
   border-radius: inherit;
 }
@@ -121,4 +135,30 @@ h1,h2,h3 {
   width: 30%;
   text-align: right;
   margin-bottom: 0.5rem;
+}
+
+.active-nav a {
+  background-color: var(--neutral-0);
+  color: var(--neutral-900);
+  font-weight: 600;
+}
+
+.badge {
+  background-color: var(--terracotta-600) !important;
+  color: var(--neutral-0);
+}
+
+.receipt,
+.host-note {
+  position: relative;
+}
+
+
+
+/* special rule that applies in desktop view */
+@media (min-width: 992px) {
+  .host-note {
+    margin-left: -3rem;
+    transform: rotate(3deg);
+  }
 }
