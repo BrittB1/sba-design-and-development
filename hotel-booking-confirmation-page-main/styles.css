@@ -93,3 +93,32 @@ h1,h2,h3 {
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
+
+/* Cards */
+.host-note.card-body {
+  background-color: var(--terracotta-600);
+  color: var(--neutral-50);
+  border-radius: inherit;
+}
+
+.receipt.card-body {
+  background-color: var(--neutral-50);
+  border-radius: inherit;
+}
+
+.costs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.costs dt {
+  width: 70%;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.costs dd {
+  width: 30%;
+  text-align: right;
+  margin-bottom: 0.5rem;
+}
