@@ -18,180 +18,189 @@
   <link href="css/styles.css" rel="stylesheet">
 
   <title>Frontend Mentor | Hotel booking confirmation page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 0.6875rem;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
 
-
   <main class="booking-confirmation">
     <div class="row g-0">
 
-      <aside class="col-lg-3 sidebar">
+      <!-- Sidebar starts -->
+      <aside class="col-lg-3 sidebar p-4 d-flex flex-column">
 
         <div class="header">
-          <p class="logo">Maison Soleil </p>
+          <p class="logo">Maison Soleil</p>
         </div>
 
         <!-- Guest navigation -->
-
         <nav class="navigation">
           <ul>
-            <li>Your stay <span>1</span></li>
-            <li>The house</li>
-            <li>Around town</li>
-            <li>Breakfast</li>
-            <li>Messages</li>
+            <li class="active-nav"><a href="#">Your stay <span class="badge rounded-pill">1</span></a></li>
+            <li><a href="#">The house</a></li>
+            <li><a href="#">Around town</a></li>
+            <li><a href="#">Breakfast</a></li>
+            <li><a href="#">Messages</a></li>
           </ul>
         </nav>
 
         <!-- Local weather -->
-
-        <div class="weather">
+        <div class="weather mt-auto">
           <p>Today in Cassis</p>
-          <p class="weather-temp"> 27°</p>
-          <p> Sunny · light breeze</p>
+          <p class="weather-temp">27&deg;</p>
+          <p>Sunny &middot; light breeze</p>
         </div>
 
         <div class="copyright-stuff">
-          <p> Est. 1987</p>
-          <p> Maison Soleil · 12 Rue des Oliviers · Cassis </p>
-          <p>© 2026 Maison Soleil </p>
+          <p>Est. 1987</p>
+          <p>Maison Soleil &middot; 12 Rue des Oliviers &middot; Cassis</p>
+          <p>&copy; 2026 Maison Soleil</p>
         </div>
 
       </aside>
-      <!-- Sidebar starts -->
-
-
-
-
       <!-- Sidebar ends -->
 
       <!-- Main content starts -->
-      <div class="col-lg-9 main-content">
+      <div class="col-lg-9 main-content p-4 p-lg-5">
 
-        <div class="confirmation-header">
-          <p class="status">Booking · Confirmed</p>
-          <h1>Bienvenue, Lucia.</h1>
-
-          <button type="button">Print Receipt</button>
-          <button type="button">Add to Calender</button>
+        <div class="confirmation-header d-flex justify-content-between align-items-start mb-5">
+          <div class="header-text">
+            <p class="status">Booking &middot; Confirmed</p>
+            <h1>Bienvenue, <em>Lucia.</em></h1>
+          </div>
+          <div class="header-buttons">
+            <button type="button" class="btn btn-outline-dark rounded-pill">Print receipt</button>
+            <button type="button" class="btn btn-dark rounded-pill">Add to calendar</button>
+          </div>
         </div>
+
         <!-- Booking cards start -->
         <div class="row g-0 booking-cards">
 
-          <div class="receipt">
+          <!-- Receipt card -->
+          <div class="col-lg-6">
+            <div class="card receipt">
+              <div class="card-body">
 
-            <p class="receipt-label">Receipt</p>
-            <p class="receipt-number">№ MS-2026 0421-AH</p>
+                <p class="receipt-label">Receipt</p>
+                <p class="receipt-number">&#8470; MS-2026 0421-AH</p>
 
-            <h2> Your stay</h2>
+                <h2>Your stay</h2>
 
-            <dl>
-              <dt>Check in</dt>
-              <dd><time datetime="2026-04-25">25 Apr</time> · Saturday · 15:00</dd>
+                <dl class="dates">
+                  <dt>Check in</dt>
+                  <dd><time datetime="2026-04-25">25 Apr</time> &middot; Saturday &middot; 15:00</dd>
 
-              <dt>Check out</dt>
-              <dd><time datetime="2026-04-29">29 Apr</time> · Wednesday · 11:00</dd>
-            </dl>
+                  <dt>Check out</dt>
+                  <dd><time datetime="2026-04-29">29 Apr</time> &middot; Wednesday &middot; 11:00</dd>
+                </dl>
 
-            <dl class="costs">
-              <dt>Room · La Garrigue · 4 nights</dt>
-              <dd>€ 620.00</dd>
+                <dl class="costs">
+                  <dt>Room &middot; La Garrigue &middot; 4 nights</dt>
+                  <dd>&euro; 620.00</dd>
 
-              <dt>Breakfast · 2 guests</dt>
-              <dd>€ 96.00</dd>
+                  <dt>Breakfast &middot; 2 guests</dt>
+                  <dd>&euro; 96.00</dd>
 
-              <dt>Tourist tax</dt>
-              <dd>€ 14.40</dd>
+                  <dt>Tourist tax</dt>
+                  <dd>&euro; 14.40</dd>
 
-              <dt>Total paid</dt>
-              <dd>€ 730.40</dd>
-            </dl>
+                  <dt>Total paid</dt>
+                  <dd>&euro; 730.40</dd>
+                </dl>
 
-            <p class="payment-method">Paid · Wise · GBP</p>
+                <p class="payment-method">Paid &middot; Wise &middot; GBP</p>
 
-            <!-- Barcode image -->
-            <img src="./assets/images/./icon-barcode.svg" alt="Booking barcode">
+                <!-- Barcode image -->
+                <img src="./assets/images/icon-barcode.svg" alt="Booking barcode">
+
+              </div>
+            </div>
           </div>
+
+          <!-- Note from host card -->
+          <div class="col-lg-6">
+            <div class="card host-note">
+              <div class="card-body">
+
+                <p class="note-label">Welcome</p>
+                <h2>A note from your host, <em>Margaux.</em></h2>
+                <p class="note-body">We're so glad you're coming. The shutters will be open,
+                  the lemonade cold, and the cat - Poivre - pretending not to notice you.</p>
+
+                <dl class="room-info">
+                  <dt>Room</dt>
+                  <dd>La Garrigue</dd>
+                </dl>
+
+              </div>
+            </div>
+          </div>
+
         </div>
-      </div>
-      <!-- Receipt card -->
+        <!-- Booking cards end -->
 
-      <!-- Note from host card -->
-      <div class="col-lg-6">
-        <div class="host-note">
-          <p class="note-label">Welcome</p>
-          <h2>A note from your host, Margaux.</h2>
-          <p class="note-body">We're so glad you're coming. The shutters will be open,
-            the lemonade cold, and the cat - Poivre - pretending not to notice you.</p>
+        <!-- Guest info row starts -->
+        <div class="row g-4 info-row">
+
+          <!-- Arrival -->
+          <div class="col-lg-4">
+            <div class="card info-block">
+              <div class="card-body">
+                <h3>Arrival</h3>
+                <p class="info-number">01</p>
+                <p class="info-detail">Check-in from 15:00</p>
+                <p class="info-detail">Sat, 25 April</p>
+                <p class="info-body">Ring the brass bell by the blue door. If we're at the
+                  market, the key is in the terracotta pot by the olive tree.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wifi -->
+          <div class="col-lg-4">
+            <div class="card info-block">
+              <div class="card-body">
+                <h3>Wifi</h3>
+                <p class="info-number">02</p>
+                <dl class="wifi-details">
+                  <dt>Network</dt>
+                  <dd>Le Soleil &middot; Guest</dd>
+                  <dt>Password</dt>
+                  <dd><span class="password">soleil-2026</span></dd>
+                </dl>
+                <button type="button" class="btn btn-sm btn-outline-dark">Copy</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Breakfast -->
+          <div class="col-lg-4">
+            <div class="card info-block">
+              <div class="card-body">
+                <h3>Breakfast</h3>
+                <p class="info-number">03</p>
+                <p class="info-detail">Served 8 - 10:30</p>
+                <p class="info-detail">On the terrace</p>
+                <p class="info-body">Fresh figs, Marseille honey, pain au levain, and espresso. Gluten-free option?
+                  Leave a note the night before.</p>
+              </div>
+            </div>
+          </div>
+
         </div>
+        <!-- Guest info row ends -->
 
-        <!-- dl - decsription list -->
-        <dl class="room-info">
-          <dt>Room</dt>
-          <dd>La Garrigue</dd>
-        </dl>
       </div>
+      <!-- Main content ends -->
 
-      <!-- Booking cards end -->
-
-      <!-- Guest info row starts -->
-
-      <!-- Arrival -->
-      <div class="info-block">
-        <h3>Arrival</h3>
-        <p class="info-number">01</p>
-        <p class="info-detail">Check-in from 15:00</p>
-        <p class="info-detail">Sat, 25 April</p>
-        <p class="info-body">Ring the brass bell by the blue door. If we're at the
-          market, the key is in the terracotta pot by the olive tree.</p>
-      </div>
-
-      <!-- Wifi -->
-      <div class="info-block">
-        <h3>Wifi</h3>
-        <p class="info-number">02</p>
-        <dl class="wifi-details">
-          <dt>Network</dt>
-          <dd>Le Soleil · Guest</dd>
-          <dt>Password</dt>
-          <dd><span class="password">soleil-2026</span></dd>
-        </dl>
-        <button type="button">Copy</button>
-      </div>
-
-      <!-- Breakfast -->
-      <div class="info-block">
-        <h3>Breakfast</h3>
-        <p class="info-number">03</p>
-        <p class="info-detail">Served 8 - 10:30</p>
-        <p class="info-detail">On the terrace</p>
-        <p class="info-body">Fresh figs, Marseille honey, pain au levain, and espresso. Gluten-free option? Leave a note
-          the
-          night before.</p>
-      </div>
-      <!-- Guest info row ends -->
-
+    </div>
   </main>
-
-  <!-- Main content ends -->
 
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Britt</a>.
   </footer>
+
 </body>
 
 </html>

@@ -2,13 +2,27 @@
     /* CSS custome vars created w/ '--'. Allows for editing of one stored value */
     --font-display: 'Fraunces', serif;
     --font-body: 'DM Sans', sans-serif;
-    --font-mono: 'Fraunces', monospace;
+    --font-mono: 'DM Mono', monospace;
 
-    --neutral-900: hsl(33,15%,15%);
-    --neutral-100: hsl(33,60%,96%);
-    --neutral-0: hsl(0,0%,100%);
-    --terracotta-600: hsl(15,74%,41%);
-    --sun-500: hsl(42,83%,58%);
+--neutral-900: hsl(33, 15%, 15%);
+    --neutral-800: hsl(33, 22%, 20%);
+    --neutral-700: hsl(32, 20%, 29%);
+    --neutral-600: hsl(33, 17%, 41%);
+    --neutral-400: hsl(36, 22%, 86%);
+    --neutral-200: hsl(30, 24%, 93%);
+    --neutral-100: hsl(35, 60%, 96%);
+    --neutral-50: hsl(40, 60%, 98%);
+    --neutral-0: hsl(0, 0%, 100%);
+
+    --sun-500: hsl(42, 83%, 58%);
+    --sun-300: hsl(44, 84%, 75%);
+    --sun-200: hsl(45, 100%, 74%);
+    --sun-50: hsl(41, 100%, 93%);
+
+    --terracotta-700: hsl(15, 69%, 37%);
+    --terracotta-600: hsl(15, 74%, 41%);
+    --terracotta-500: hsl(18, 62%, 47%);
+    --terracotta-400: hsl(22, 72%, 56%);
 }
 
 /* ---------Sidebar---------- */
@@ -70,4 +84,12 @@ h1,h2,h3 {
   letter-spacing: 0.1em;
   font-size: 0.75rem;
   color: var(--neutral-600);
+}
+.attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+}
+ 
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
